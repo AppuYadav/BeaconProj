@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:id="@+id/relativeLayout"
+  android:layout_width="match_parent"
+  android:layout_margin="10dp"
+  android:background="@drawable/row_device_custom_border_rounable"
+  android:padding="3dp"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:id="@+id/lltagID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:padding="5dp"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Tag ID"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvTagID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="23423423"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/lltagID"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llverbosename"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:padding="5dp"
+    android:layout_below="@+id/lltagID"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Verbose Tag Name"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvtagverbosename"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LAB LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/llverbosename"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llmessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llverbosename"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Message"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvmessage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llcreatedDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llmessage"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Created Date"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvcreatedDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llupdatedDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llcreatedDate"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Updated Date"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvupdateDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+</RelativeLayout>

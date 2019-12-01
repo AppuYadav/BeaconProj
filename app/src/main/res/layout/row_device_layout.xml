@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:id="@+id/relativeLayout"
+  android:layout_width="match_parent"
+  android:layout_margin="10dp"
+  android:background="@drawable/row_device_custom_border_rounable"
+  android:padding="3dp"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:id="@+id/llDeviceType"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:padding="5dp"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Device Type"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvDeviceType"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="IBeacon"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/llDeviceType"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llMacID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llDeviceType"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Mac ID"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvMacID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="55:66:4F:C5:97:32"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/lluuid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llMacID"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:text="UUID"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvUUID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="54673645-347573645-83467836-3475634-8364385"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llmajorminor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/lluuid"
+    android:weightSum="2">
+
+    <LinearLayout
+      android:id="@+id/llmajor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/lluuid"
+      android:layout_marginRight="3dp"
+      android:padding="5dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Major"
+        android:textAlignment="textStart"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="3362"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/llminor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp"
+      android:layout_marginLeft="3dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minor"
+        android:textAlignment="textStart"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvMinor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="7861"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/lltxrssi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llmajorminor"
+
+    android:weightSum="2">
+
+    <LinearLayout
+      android:id="@+id/lltx"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/lluuid"
+      android:padding="5dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tx Power"
+        android:textAlignment="textStart"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvTxPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="-92 dBm"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/llrssi"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RSSI"
+        android:textAlignment="textStart"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvRSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="-91 dBm"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/lldistemp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/lltxrssi"
+
+    android:weightSum="2">
+
+    <LinearLayout
+      android:id="@+id/lldis"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/lluuid"
+      android:padding="5dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        android:textAlignment="textStart"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvDis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text="23 m"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lltemp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp"
+      android:layout_weight="1"
+      android:weightSum="2">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:textAlignment="textEnd"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="22C"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llupdate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/lldistemp"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="140dp"
+      android:layout_height="wrap_content"
+      android:text="Last Update"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvUpdate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="2019-08-15 13:46:19"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llstatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llupdate"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Status"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="Not Register"
+      android:textColor="@color/white"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/llstatus"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llscanRecord"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llstatus"
+    android:padding="5dp">
+
+    <TextView
+      android:id="@+id/tvScanRecord"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="84376574687KDJNFJVDFHJHGJFHRUIYRTUYFUGIHJHBJVHB7Y47YUYEG78DYVUDFHUHVUDFYDHFGYG7DFGDYFGUHDF7GDF8GDFYHGDFG88DFGD8F9G79DFGHDFJGHJFDHG98DFG89DFGHFDHGHDFUGFD7G89DF9GHDFGHDFHGJDG9FD8G9DFUGIFDJGIFDJGHDFHGJDFHGFDGGG"
+      android:textAlignment="textStart"/>
+
+  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<item
+  android:id="@+id/action_search"
+  android:icon="@drawable/ic_action_action_search"
+  android:orderInCategory="300"
+  android:title="Search..."
+  app:showAsAction="ifRoom"
+  />
+
+<item
+  android:id="@+id/action_scan"
+  android:orderInCategory="300"
+  android:title="Scan"
+  android:icon="@drawable/rfid"
+  android:visible="true"
+  app:showAsAction="ifRoom" />
+
+<item
+  android:id="@+id/action_stop"
+  android:orderInCategory="300"
+  android:visible="false"
+  android:title="Stop"
+  app:showAsAction="ifRoom" />
+
+<item
+  android:id="@+id/action_all"
+  android:orderInCategory="300"
+  android:title="All Register Devices"
+  android:icon="@drawable/all"
+  android:visible="true"
+  app:showAsAction="ifRoom" />
+
+<item
+  android:id="@+id/action_all_tag"
+  android:orderInCategory="300"
+  android:title="All Tag"
+  android:icon="@drawable/all"
+  android:visible="true"
+  app:showAsAction="ifRoom" />
+
+
+<item
+  android:id="@+id/action_setting"
+  android:orderInCategory="300"
+  android:title="Setting"
+  android:visible="true"
+  android:icon="@drawable/ic_settings_black_24dp"
+  app:showAsAction="ifRoom" />
+
+</menu>

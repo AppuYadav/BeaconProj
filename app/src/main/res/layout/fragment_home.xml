@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@color/purple"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Activity.MainActivity">
+
+  <LinearLayout
+    android:id="@+id/messagelayout"
+    android:layout_marginTop="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_bias="0.098"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tvDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="Aug 13, 2019"
+      android:textAlignment="textStart"
+      android:textColor="#fff"
+      android:textSize="15sp" />
+
+
+    <TextView
+      android:id="@+id/tvName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:text="Appu Yadav"
+      android:textAlignment="textStart"
+      android:textColor="#fff"
+      android:textSize="18sp"/>
+
+    <TextView
+      android:id="@+id/tvMessage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:text="Have a nice day!"
+      android:textAlignment="textStart"
+      android:textColor="#fff"
+      android:textSize="18sp"/>
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginTop="52dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:visibility="gone"-->
+    <!--android:src="@drawable/illustration"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.496"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/tvMessage" />-->
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="@drawable/bg_menu"
+    android:layout_marginEnd="0dp"
+    android:layout_marginStart="0dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/messagelayout">
+
+    <LinearLayout
+      android:paddingTop="15dp"
+      android:paddingBottom="5dp"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_gravity="center_horizontal"
+      android:layout_weight="2">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:orientation="vertical"
+          android:background="@drawable/bg_green"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp">
+
+          <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/checked"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Total \nBeacon"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="15sp"/>
+
+            <View
+              android:layout_width="2dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="8dp"
+              android:rotation="180"
+              android:background="@android:color/white"/>
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="10"
+              android:layout_marginBottom="3dp"
+              android:gravity="center_horizontal"
+              android:layout_gravity="center_vertical"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="20sp"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:orientation="vertical"
+          android:background="@drawable/bg_red"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp">
+
+          <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/link"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Total \nBeacon"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="15sp"/>
+
+            <View
+              android:layout_width="2dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="8dp"
+              android:rotation="180"
+              android:background="@android:color/white"/>
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:layout_marginBottom="3dp"
+              android:text="10"
+              android:layout_gravity="center_vertical"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="20sp"/>
+
+          </LinearLayout>
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:paddingBottom="0dp"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_gravity="center_horizontal"
+      android:layout_weight="2">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:orientation="vertical"
+          android:background="@drawable/bg_blue"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp">
+
+          <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/film"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Total \nBeacon"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="15sp"/>
+
+            <View
+              android:layout_width="2dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="8dp"
+              android:rotation="180"
+              android:background="@android:color/white"/>
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:layout_marginBottom="3dp"
+              android:text="10"
+              android:layout_gravity="center_vertical"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="20sp"/>
+
+          </LinearLayout>
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="120dp"
+          android:orientation="vertical"
+          android:background="@drawable/bg_sky"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp">
+
+          <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pluspro"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Total \nBeacon"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="15sp"/>
+
+            <View
+              android:layout_width="2dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="8dp"
+              android:rotation="180"
+              android:background="@android:color/white"/>
+
+            <TextView
+              android:layout_marginLeft="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:layout_marginBottom="3dp"
+              android:text="10"
+              android:layout_gravity="center_vertical"
+              android:layout_weight="1"
+              android:textColor="#fff"
+              android:textSize="20sp"/>
+
+          </LinearLayout>
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

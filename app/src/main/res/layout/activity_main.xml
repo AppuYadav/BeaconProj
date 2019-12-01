@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Activity.MainActivity">
+
+  <FrameLayout
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/toolbar_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/my_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/colorPrimary" />
+
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+      android:id="@+id/search_view"
+      android:hint="Search Location"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:searchBackground="@color/colorPrimary"
+      app:searchSuggestionBackground="@color/colorPrimary"
+      app:searchCloseIcon="@drawable/ic_action_navigation_close_inverted"
+      app:searchBackIcon="@drawable/ic_action_navigation_arrow_back_inverted"
+      app:searchSuggestionIcon="@drawable/ic_suggestion"
+      android:textColor="#FFFFFF"
+      android:textColorHint="#FFFFFF"
+      />
+
+  </FrameLayout>
+
+  <LinearLayout
+    android:id="@+id/lllocation"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    app:layout_constraintRight_toRightOf="parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/toolbar_container"
+    android:weightSum="1"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large">
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".2"
+      android:src="@drawable/ic_my_location_black_24dp" />
+
+    <TextView
+      android:layout_weight=".8"
+      android:id="@+id/txtSpeechInput"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=""
+      android:textColor="@color/white"
+      android:textSize="18dp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/lldestination"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    app:layout_constraintRight_toRightOf="parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/lllocation"
+    android:weightSum="1"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large">
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".2"
+      android:src="@drawable/ic_location_on_black_24dp" />
+
+    <TextView
+      android:layout_weight=".8"
+      android:id="@+id/txtdestination"
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:textSize="18dp" />
+
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:fitsSystemWindows="true"
+    android:src="@drawable/rfid_480"
+    android:visibility="gone"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/toolbar_container"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/toolbar_container"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+  <com.github.ybq.android.spinkit.SpinKitView
+    android:id="@+id/loader"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/toolbar_container"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.40"
+    app:layout_constraintTop_toTopOf="@+id/toolbar_container"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:SpinKit_Color="@color/colorAccent" />
+
+  <LinearLayout
+    android:id="@+id/mic"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/toolbar_container"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.65"
+    app:layout_constraintTop_toTopOf="@+id/toolbar_container"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageButton
+      android:id="@+id/btnSpeak"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:src="@drawable/ic_mic_black_24dp" />
+
+    <TextView
+      android:textStyle="normal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/tap_on_mic"
+      android:textColor="@color/white"
+      android:textSize="15dp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/tag_id_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/toolbar_container"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.85"
+    app:layout_constraintTop_toTopOf="@+id/toolbar_container"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tag_id_input"
+      app:boxStrokeColor = "@color/purple"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      app:hintTextAppearance="@style/TextAppearence.TextInputLayout.Blue"
+      android:layout_marginTop="12dp"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/mic"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintVertical_bias="0.75"
+      app:layout_constraintTop_toTopOf="@+id/mic"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tag_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Tag ID"
+        android:maxLength="8"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+
+  <ru.dimorinny.floatingtextbutton.FloatingTextButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:floating_background_color="@color/colorPrimary"
+    app:floating_left_icon="@drawable/rfid"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_margin="10dp"
+    app:floating_title="Beacon Register"
+    app:floating_title_color="@android:color/white"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

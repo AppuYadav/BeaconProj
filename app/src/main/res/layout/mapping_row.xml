@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:id="@+id/relativeLayout"
+  android:layout_width="match_parent"
+  android:layout_margin="10dp"
+  android:background="@drawable/row_device_custom_border_rounable"
+  android:padding="3dp"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:id="@+id/lldestination"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:padding="5dp"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Destination"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvDestination"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="23423423"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/lldestination"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llnoofhops"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:padding="5dp"
+    android:layout_below="@+id/lldestination"
+    android:layout_alignParentEnd="true"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="No Of Hops"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvnoofHops"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LAB LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/llnoofhops"
+    android:background="@android:color/darker_gray"/>
+
+  <LinearLayout
+    android:id="@+id/llDistance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llnoofhops"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Distance (In Steps)"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvDistance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llDirection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llDistance"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Direction"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvDirection"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llCreatedDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llDirection"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Created Date"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvCreatedDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/llUpdatedDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/llCreatedDate"
+    android:padding="5dp"
+    android:weightSum="2">
+
+    <TextView
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="Updated Date"
+      android:textAlignment="textStart"
+      android:layout_weight="1"/>
+
+    <TextView
+      android:id="@+id/tvUpdatedDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAlignment="textEnd"
+      android:text="LEFT"
+      android:layout_weight="1"/>
+  </LinearLayout>
+
+</RelativeLayout>
